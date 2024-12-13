@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Shirkot | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* Neutral background for the header */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333; /* Neutral color for the title */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin: 0;
+}
+
+/* Section-Specific Colors for Links */
+header ul li a {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+header ul li a.about-link {
+    color: #FF5722; /* Matches About Section */
+}
+
+header ul li a.skills-link {
+    color: #3F51B5; /* Matches Skills Section */
+}
+
+header ul li a.projects-link {
+    color: #2196F3; /* Matches Projects Section */
+}
+
+header ul li a.education-link {
+    color: #4CAF50; /* Matches Education Section */
+}
+
+header ul li a.certifications-link {
+    color: #FF9800; /* Matches Certifications Section */
+}
+
+header ul li a.contact-link {
+    color: #9C27B0; /* Matches Contact Section */
+}
+
+/* Hover Effect for Links */
+header ul li a:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+    color: #000; /* Neutral hover color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Contact Section Styling */
+#contact {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-size: 28px;
+    color: #9C27B0; /* Purple Color */
+    border-bottom: 2px solid #9C27B0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+#contact a {
+    color: #9C27B0; /* Purple Link Color */
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+    color: #7B1FA2; /* Darker Purple for Hover */
+}
+
+#about-me {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+#about-me h2 {
+    font-size: 28px;
+    color: #FF5722;
+    border-bottom: 2px solid #FF5722;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#about-me p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+#about-me p strong {
+    color: #333;
+    font-weight: bold;
+}
+
+#about-me p em {
+    color: #FF5722;
+    font-style: italic;
+}
+
+#about-me:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#certifications {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#certifications h2 {
+    font-size: 28px;
+    color: #FF9800;
+    border-bottom: 2px solid #FF9800;  /* New Color (Orange) */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#certifications h3 {
+    font-size: 22px;
+    color: #FF9800;  /* New Color (Orange) */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#certifications ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#certifications ul li {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+#certifications ul li strong {
+    font-weight: normal;  /* Removed bold */
+    color: #555;  /* Keeping text color normal */
+}
+
+#skills {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#skills h2 {
+    font-size: 28px;
+    color: #3F51B5;
+    border-bottom: 2px solid #3F51B5;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#skills h3 {
+    font-size: 22px;
+    color: #3F51B5;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skills ul li {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+#skills ul li::before {
+    content: "•";
+    color: #3F51B5;
+    margin-right: 10px;
+}
+
+#skills ul li strong {
+    font-weight: bold;
+    color: #333;
+}
+
+#education {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#education h2 {
+    font-size: 28px;
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.education-level {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.education-level:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.education-level h3 {
+    font-size: 22px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.education-level p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.education-level p strong {
+    color: #333;
+    font-weight: bold;
+}
+
+
+#projects {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#projects h2 {
+    font-size: 28px;
+    color: #2196F3;
+    border-bottom: 2px solid #2196F3;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.project {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project h3 {
+    font-size: 22px;
+    color: #2196F3;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.project p strong {
+    color: #333;
+    font-weight: bold;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+</style>    
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Aditya Shirkot</h1>
+            <ul>
+                <li><a href="#about" class="about-link">About</a></li>
+                <li><a href="#skills" class="skills-link">Skills</a></li>
+                <li><a href="#projects" class="projects-link">Projects</a></li>
+                <li><a href="#education" class="education-link">Education</a></li>
+                <li><a href="#certifications" class="certifications-link">Certifications</a></li>
+                <li><a href="#contact" class="contact-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Hello! I'm <strong>Aditya Shirkot</strong>, a passionate and dedicated B.E. in Computer Science Engineering student at Chandigarh University, specializing in Blockchain Technology. With a strong foundation in programming and a knack for problem-solving, I thrive on creating innovative solutions that bridge technology and real-world challenges.</p>
+        <p>I have experience in blockchain, artificial intelligence, and cybersecurity, along with frontend development, where my creativity shines. My recent projects include a <em>Collaborative Code Editor</em>, a <em>Virtual Assistant - AI Chatbot</em>, and a <em>Periodic Table Memorizer</em>, showcasing my ability to work across diverse domains.</p>
+        <p>Beyond academics, I aim to become a software developer who builds impactful, scalable, and secure systems. My interests also include graphic design, where I channel my creativity into crafting visually compelling designs.</p>
+        <p>In my journey, I value ownership, teamwork, and continuous learning, always striving to stay ahead in the rapidly evolving tech landscape. Let's connect and create something amazing together!</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        
+        <h3>Technical Competencies</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+        </ul>
+        
+        <h3>Interpersonal Skills</h3>
+        <ul>
+            <li>Team Leadership</li>
+            <li>Management & Coordination</li>
+            <li>Decision Making</li>
+        </ul>
+        
+        <h3>Interests & Hobbies</h3>
+        <ul>
+            <li>Writing</li>
+            <li>Sketching</li>
+            <li>Travelling</li>
+            <li>Reading</li>
+            <li>Gardening</li>
+        </ul>
+    
+        <h3>Expertise</h3>
+        <ul>
+            <li><strong>Blockchain Development:</strong> Experience in developing decentralized applications (dApps), smart contracts, and blockchain integration.</li>
+            <li><strong>Cybersecurity:</strong> Knowledge of network security, ethical hacking, vulnerability analysis, and threat mitigation strategies.</li>
+            <li><strong>Web Development:</strong> Proficient in frontend development using HTML, CSS, JavaScript; familiar with frameworks like React.js and Vue.js.</li>
+        </ul>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Virtual Assistant - AI Chatbot</h3>
+            <p>Description: Developed an AI chatbot capable of understanding and responding to user queries using natural language processing, providing assistance across various domains.</p>
+            <p>Technologies Used: Python, TensorFlow, Natural Language Toolkit (NLTK), Flask</p>
+        </div>
+        <div class="project">
+            <h3>Collaborative Code Editor</h3>
+            <p>Description: Created a real-time, multi-user code editor that supports collaboration on coding tasks with syntax highlighting and version control integration.</p>
+            <p>Technologies Used: Node.js, WebSockets, CodeMirror, MongoDB</p>
+        </div>
+        <div class="project">
+            <h3>Periodic Table Memorizer</h3>
+            <p>Description: Designed an interactive application to help users memorize the periodic table through quizzes, flashcards, and visual aids.</p>
+            <p>Technologies Used: HTML, CSS, JavaScript, React</p>
+        </div>
+    </section>
+    
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-level">
+            <h3>Bachelors in Computer Science Engineering</h3>
+            <p><strong>Institution:</strong> Chandigarh University, Gharuan</p>
+            <p><strong>Session:</strong> 2022-2026</p>
+            <p><strong>Specialization:</strong> Blockchain Technology</p>
+        </div>
+        <div class="education-level">
+            <h3>Intermediate (CBSE)</h3>
+            <p><strong>Institution:</strong> D A V Public School, New Shimla</p>
+            <p><strong>Session:</strong> 2020-2021</p>
+            <p><strong>Percentage:</strong> 89%</p>
+        </div>
+        <div class="education-level">
+            <h3>Matriculation (CBSE)</h3>
+            <p><strong>Institution:</strong> D A V Public School, New Shimla</p>
+            <p><strong>Session:</strong> 2018-2019</p>
+            <p><strong>Percentage:</strong> 84%</p>
+        </div>
+    </section>
+    
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <h3>CISCO Networking Academy</h3>
+        <ul>
+            <li><strong>Cybersecurity Essentials</strong></li>
+            <li><strong>Introduction to Cybersecurity</strong></li>
+            <li><strong>Introduction to Packet Tracer</strong></li>
+        </ul>
+        <h3>Coursera</h3>
+        <ul>
+            <li><strong>Blockchain Specialization</strong> (University at Buffalo, The State University of New York)</li>
+            <li><strong>Introduction to Applied Cryptography</strong> (University of Colorado System)</li>
+        </ul>
+        
+        <h3>LinkedIn</h3>
+        <ul>
+            <li><strong>Learning Python: From Beginner to Expert</strong></li>
+            <li><strong>Academic Paper Writing and IPR</strong></li>
+            <li><strong>Design Thinking and Creativity for Innovation</strong></li>
+        </ul>
+        
+    </section>
+    
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:adityashirkot2003@gmail.com">adityashirkot2003@gmail.com</a></p>
+        <p>Mobile: 9459561869</p>
+        <p>GitHub: <a href="https://github.com/Aditya-Shirkot" target="_blank">https://github.com/Aditya-Shirkot</a></p>
+        <p>&nbsp;</p>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Aditya Shirkot. All rights reserved.</p>
+    </footer>
+</body>
+</html>
